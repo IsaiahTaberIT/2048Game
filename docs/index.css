@@ -1,0 +1,28 @@
+﻿h1 {
+   text-align: center;
+   margin-top: 10vh;
+}
+
+.blerb-container {
+    margin: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    height: 90vh;
+    background-color: rgb(217, 229, 255);
+    background-image: radial-gradient(rgb(255, 245, 170),rgb(245, 172, 124));
+    border: solid;
+    border-radius: 5vw;
+    border-width: 1vw;
+    border-color: rgb(255, 251, 161);
+}
+
+body {
+    background-attachment: fixed;
+    background-color: rgb(217, 229, 255);
+    background-image: radial-gradient(rgb(255, 225, 150),rgb(192, 122, 54));
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 275vh;
+}
+
