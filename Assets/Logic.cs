@@ -68,7 +68,6 @@ public class Logic : MonoBehaviour
         Gameobjectlist = GameObject.FindGameObjectsWithTag("Number");
 
         if (Input.GetKeyDown(KeyCode.Escape))
-
         {
 
 #if UNITY_EDITOR
@@ -76,8 +75,8 @@ public class Logic : MonoBehaviour
             EditorApplication.isPlaying = false;
 
 #endif
-
-            Application.Quit();
+            //Disabling this for OpenGL because quitting the application just bricks it lol
+         //   Application.Quit();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -129,7 +128,7 @@ public class Logic : MonoBehaviour
 
                             if (oldvalue == newvalue && oldvalue != 0)
                             {
-                                Debug.Log("reee");
+                                //Debug.Log("reee");
                                 a--;
                                 Destroy(Coords[Indx, a]);
 
@@ -209,7 +208,7 @@ public class Logic : MonoBehaviour
 
                             if (oldvalue == newvalue && oldvalue != 0)
                             {
-                                Debug.Log("reee");
+                                //Debug.Log("reee");
                                 a--;
                                 Destroy(Coords[Indx, a]);
                                 Coords[Indx, a] = tempobj;
@@ -286,7 +285,7 @@ public class Logic : MonoBehaviour
 
                             if (oldvalue == newvalue && oldvalue != 0)
                             {
-                                Debug.Log("reee");
+                              //  Debug.Log("reee");
                                 a--;
                                 Destroy(Coords[a, Indy]);
                                 Coords[a, Indy] = tempobj;
@@ -364,7 +363,7 @@ public class Logic : MonoBehaviour
 
                             if (oldvalue == newvalue && oldvalue != 0)
                             {
-                                Debug.Log("reee");
+                             //   Debug.Log("reee");
                                 a--;
                                 Destroy(Coords[a, Indy]);
                                 Coords[a, Indy] = tempobj;
@@ -467,7 +466,7 @@ public class Logic : MonoBehaviour
            
             if ( Emptysquarelist.Count > 0)
             {
-                Debug.Log("new square" + Emptysquarelist[ranind].x + ',' + Emptysquarelist[ranind].y);
+              //  Debug.Log("new square" + Emptysquarelist[ranind].x + ',' + Emptysquarelist[ranind].y);
                 if (Mathf.RoundToInt(Random.Range(1, 10)) == 1)
                 {
 

@@ -515,7 +515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Press: "ESC" to Quit
+  m_text: '
 
     Press: "R" to Reset'
   m_isRightToLeft: 0
@@ -1191,6 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ef088dd19362e43a977b42d6752bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Hardmode: 0
   MinumumSpawns: 1
   MaximumSpawns: 1
   ran: 0
