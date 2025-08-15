@@ -1,4 +1,14 @@
-﻿h1 {
+﻿body {
+    text-align: center;
+    background-attachment: fixed;
+    background-color: rgb(217, 229, 255);
+    background-image: radial-gradient(rgb(255, 225, 150),rgb(192, 122, 54));
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 225vh;
+}
+
+h1 {
    text-align: center;
    margin-top: 10vh;
 }
@@ -17,12 +27,15 @@
     border-color: rgb(255, 251, 161);
 }
 
-body {
-    background-attachment: fixed;
-    background-color: rgb(217, 229, 255);
-    background-image: radial-gradient(rgb(255, 225, 150),rgb(192, 122, 54));
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 275vh;
+.unitystuff {
+    border: none;
+    background-color: rgb(255, 183, 60);
+    border-radius: 50px;
+    height: 780px;
+    width: 1024px;
+    transform: scale(0.75, 0.75);
+    margin-right: auto;
+    margin-left: auto;
 }
+
 
