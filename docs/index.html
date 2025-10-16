@@ -9,11 +9,109 @@
 </head>
 <body>
 
-    <h1>2048</h1>
+   
+    <div class="block-left">
+        <div class="spacer"></div>
+        <a class="plainlink" href="#section-game">
+            <h3>Web Build</h3>
+        </a>
 
-    <div class="blerb-container"></div>
+        <a class="plainlink" href="#section-howtoplay">
+            <h3>How To Play?</h3>
+        </a>
 
-    <iframe type="text/html" src="unity.html" class="unitystuff" allowfullscreen></iframe>
+        <a class="plainlink" href="#section-explain">
+            <h3>How does it work?</h3>
+        </a>
+
+        <a class="plainlink" href="#section-dev">
+            <h3>Development</h3>
+        </a>
+
+        <a class="plainlink" href="#section-flaws">
+            <h3>Flaws</h3>
+        </a>
+
+    </div>
+
+    <div class="block-right">
+
+        <h1>2048</h1>
+
+        <h2 id="section-game" class="web-build-header">Web Build</h2>
+
+        <div class="wrapper">
+            <iframe type="text/html" src="unity.html" class="unitystuff" allowfullscreen></iframe>
+
+        </div>
+
+        <h2 id="section-howtoplay">How To Play</h2>
+        <h3>Controls:</h3>
+        <p>
+            Use WASD to slide tiles Up, Left, Down, Right Respectively. <br />
+            Or use the arrow keys to the same effect. <br />
+            Press "R" to reset. Especially if you get stuck<br />
+            Pressing "P" secretly toggles hardmode, there is no UI indication that it is on or off aside from the fact that the game rapidly becomes impossible.
+
+        </p>
+        <h3>Goal:</h3>
+        <p>
+            Combine tiles with matching numbers to create new tiles. <br />
+            Obtain the 2048 tile to win. <br />
+            Or try and survive as long as possible to get a highscore!
+
+        </p>
+
+        <h2 id="section-explain">How it works</h2>
+
+        <p>
+            Under the hood the grid is a 2D array, when a movement key is pressed a two pointer approach is used to decide how
+            the tiles move and if they will merge. One pointer keeps track of the next possible movement position, and the
+            other pointer points to the next potential tile to move.
+            The direction the pointers move is dependent on which key is pressed, and the checking process is repeated for each row/column depending on movement direction.
+        </p>
+        <p>
+            if any tile has successfully changed position after a movement key is pressed, 1-2 new tiles with either a value of 2 or 4 are spawned.
+        </p>
+        <h2 id="section-dev">Developement</h2>
+        <p>
+            According to the metadata of the assets in the project this was orginally made in january 2025. Specifically starting on the 18th and ending on the 21st.
+            (I know this to this level of detail because I was expecting to find like 2023 or something.
+            But the dates check out out according to the dates on other files made around the same time which means that this project is only 9 months old at time of writing.)
+        </p>
+        <p>
+            While this isn't the first project I had ever started, it is the first I had finished. I came up with the solution I used before
+            I opened the project, although I didn't learn the term "two pointer approach" until several months later.
+        </p>
+        <h2 id="section-flaws">Flaws/Self Critique</h2>
+        <p>
+            After a human gestation period since finishing this project, it would be horrifying if I hadn't improved at all as a developer, so here are all the notable problems with the project:
+        </p>
+        <ol>
+            <li>The code for each of the movement directions is nearly identical and is repeated 4 times should ave been turned into a general function</li>
+            
+            <li>Redundant re-creation array of tiles whenever a movement happens</li>
+            <li>Variable Names aren't very good</li>
+            <li>Calling tempobj.GetComponent&lt;NumberValues&gt;().value everytime &quot;value&quot; needs to be accessed.</li>
+            <li>In this line: NumberValues = tempobj.GetComponent&lt;NumberValues&gt;(); the variable has the same name as the class.</li>
+            <li>in addition &quot;NumberValues&quot; the variable is never used, which makes issue 4 just absolutely maddening.</li>
+            <li>just overcomplicated, if I were making this today I would just use a flat array instead of a 2D array.</li>
+            <li>the world grid is defined like this: GameObject[,] Coords = new GameObject[40, 40]; <br /> why is it 40x40?</li>
+            <li>the color for all of the squares is recalculated every frame, and not just when they are changed / instantiated.</li>
+            <li>Using the &quot;Color32&quot; class instead the of &quot;Color&quot; class forced me to do so much casting between integers and bytes.</li>
+            <li>Bad UI.</li>
+            <li>No saving scores across sessions.</li>
+            <li>No win state.</li>
+            <li>No Lose state, just softlocks until reset.</li>
+            
+        </ol>
+
+    </div>
+   
+
+
+
+    <script src="index.js"></script>
 
 </body>
 </html>

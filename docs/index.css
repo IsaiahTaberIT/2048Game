@@ -5,37 +5,128 @@
     background-image: radial-gradient(rgb(255, 225, 150),rgb(192, 122, 54));
     background-size: cover;
     background-repeat: no-repeat;
-    height: 225vh;
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(180deg,rgba(255, 231, 122, 1) 0%, rgba(255, 205, 79, 1) 50%, rgba(237, 165, 83, 1) 100%);
+    font-family: 'Open Sans', Arial, sans-serif;
+    color:black;
 }
 
-h1 {
-   text-align: center;
-   margin-top: 10vh;
+
+.block-right {
+    float: right;
 }
 
-.blerb-container {
-    margin: 20vh;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80vw;
+    .block-right h1 {
+        margin: 1vh 10vw 1vh 10vw;
+        padding: 5%;
+        background: radial-gradient(ellipse, rgba(255, 100, 75, 0.2) 0%, rgba(255, 255, 255, 0.3) 100%);
+        border-radius: 10vh;
+    }
+
+.block-right h2 {
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.25) 100%);
+    padding: 2% 0 2% 0;
+}
+
+    .block-right h3 {
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.25) 100%);
+}
+    .block-main {
+    width: 100%;
+}
+
+.block-right ol {
+    list-style-position: inside;
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 50px 10px 50px;
+    background-image: radial-gradient(rgb(255, 255, 255,0.05),rgb(255, 255, 255, 0.1));
+    border-radius: 10px;
+}
+.block-right p {
+   
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 50px 10px 50px;
+    background-image: radial-gradient(rgb(255, 255, 255,0.05),rgb(255, 255, 255, 0.1));
+    border-radius: 10px;
+}
+
+.block-left {
+    position: fixed;
+    text-align: left;
+    background: linear-gradient(180deg,rgba(156, 140, 0, 1) 0%, rgba(153, 89, 0, 1) 100%);
+    border-radius: 0 3vh 3vh 0vh;
+    border-style: solid;
+    border-width: 0.5vh;
+    border-color: black;
+    width: 20%;
+    height: 100vh;
+    overflow-x: auto;
+}
+
+  
+    .block-right {
+        width: 80%;
+        object-fit: contain;
+        text-align: center;
+    }
+
+.wrapper {
     height: 90vh;
-    background-color: rgb(217, 229, 255);
-    background-image: radial-gradient(rgb(255, 245, 170),rgb(245, 172, 124));
-    border: solid;
-    border-radius: 5vw;
-    border-width: 1vw;
-    border-color: rgb(255, 251, 161);
+}
+
+.spacer {
+    height: 25px;
 }
 
 .unitystuff {
-    border: none;
-    background-color: rgb(255, 183, 60);
+    --scale-factor: 1;
+    --scale-factor-x: 1;
+    --scale-factor-y: 1;
+    display: block;
+    position: relative;
+    transform-origin: 0 0;
+    transform: scale(var(--scale-factor));
+    width: calc(1 / var( --scale-factor-x) * 88vw);
+    height: calc(1 / var(--scale-factor-y) * 90vh);
+    background-color: rgb(255, 183, 60,0.0);
     border-radius: 50px;
-    height: 780px;
-    width: 1024px;
-    transform: scale(0.75, 0.75);
-    margin-right: auto;
-    margin-left: auto;
+    border:none;
+    margin-left: 13%;
+    align-self: center;
 }
 
 
+.plainlink {
+    text-decoration: none;
+}
+
+.plainlink h3 {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 5% 5% 5% 5%;
+    border-radius: 5vh;
+}
+
+
+    .plainlink:visited h3 {
+        border-radius: 5vh;
+    }
+
+
+    .plainlink:link h3 {
+        border-radius: 5vh;
+    }
+
+.plainlink:hover h3 {
+    background-color: rgb(230, 230, 250,0.15);
+    box-shadow: rgba(0,0,0,0.1) 2px 2px;
+}
+.web-build-header {
+    margin-bottom: 0;
+}
